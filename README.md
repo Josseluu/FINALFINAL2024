@@ -89,22 +89,17 @@ n = raiz cuadrada de 64 que da como resultado final 8
 
 a) El código imprimirá 1.
 
-b) El programa implementa una función recursiva llamada recursive, que toma dos argumentos enteros a y b. La función realiza una multiplicación recursiva de a por b, decrementando b en cada llamada recursiva hasta que b alcanza el valor de 0. Si b es 0, la función devuelve 1. Si a es 0, la función devuelve 0. Este tipo de recursividad se llama "recursividad descendente", donde la función se llama a sí misma con argumentos modificados hasta que se alcanza una condición base.
+b) La función recursive() intenta realizar el cálculo de la potencia de un número a elevado a la potencia de b. Sin embargo, debido a un error en la lógica, no calcula correctamente la potencia.
 
+Este código emplea recursividad lineal. La función recursive() se llama a sí misma de manera repetida, decrementando o incrementando el valor de b en cada llamada, hasta que b alcance el valor de 0. Sin embargo, la lógica incorrecta hace que b se incremente en lugar de decrementarse, lo que puede llevar a un bucle infinito en este caso específico.
 
 
 **EJERCICIO 4**
 
-El codigo esta implementado, y la explicación es esta La función recursive(a, b) calcula la potencia de a elevado a la potencia de b. Sin embargo, hay un problema en la lógica de la función recursive() en este programa. Aquí está el análisis de cómo se comportará el programa:
 
-Cuando se llama recursive(1, -2), b es negativo. Dado que b != 0, el programa entra en el bloque else.
-En la llamada recursiva recursive(a, b + 1), b se incrementa en 1. Por lo tanto, cada llamada recursiva incrementará el valor de b en 1.
-Como b es negativo, este bucle de llamadas recursivas continuará indefinidamente, ya que b nunca alcanzará 0.
-Debido a este bucle infinito, el programa nunca terminará y no imprimirá nada en la consola. En una situación real, es posible que el programa genere una excepción de desbordamiento de pila debido al exceso de llamadas recursivas.
+El código implementa recursividad lineal. Cada llamada recursiva reduce el tamaño del problema, dividiendo el número original por 10 hasta que el número se reduce a un solo dígito.
 
-
-El tipo de recursividad que usa es descendente, donde la función se llama a sí misma con un problema más pequeño, en este caso, el número dividido entre 10 hasta llegar a un caso base.
-La complejidad de este algoritmo es lineal, O(d), donde d es el número de dígitos en el número dado. Esto se debe a que la función recursiva se llama una vez por cada dígito en el número.
+La complejidad computacional de este algoritmo es O(log10(n)), donde n es el valor del número de entrada. Esto se debe a que el número de llamadas recursivas está relacionado con el número de dígitos en el número de entrada. Cada llamada recursiva divide el número por 10, lo que reduce su tamaño en un orden de magnitud logarítmico. Por lo tanto, la complejidad es logarítmica en función del número de dígitos en el número de entrada.
  
 
 **EJERCICIO 5**
