@@ -89,6 +89,7 @@ b) El programa implementa una función recursiva llamada recursive, que toma dos
 
 
 **EJERCICIO 4**
+
 El codigo esta implementado, y la explicación es esta 
 
 El tipo de recursividad que usa es descendente, donde la función se llama a sí misma con un problema más pequeño, en este caso, el número dividido entre 10 hasta llegar a un caso base.
