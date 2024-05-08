@@ -3,7 +3,7 @@
 **EJERCICIO 1**
 
 
-_Apartado 1_ La respuesta correcta es la B
+_Apartado 1_  La respuesta correcta es la B
 
 _Aparatdo 2_ La respuesta correcta es la B
 
