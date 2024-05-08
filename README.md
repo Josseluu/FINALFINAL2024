@@ -87,7 +87,7 @@ n = raiz cuadrada de 64 que da como resultado final 8
 
 **EJERCICIO 3**
 
-a) El código imprimirá "0".
+a) El código imprimirá 1.
 
 b) El programa implementa una función recursiva llamada recursive, que toma dos argumentos enteros a y b. La función realiza una multiplicación recursiva de a por b, decrementando b en cada llamada recursiva hasta que b alcanza el valor de 0. Si b es 0, la función devuelve 1. Si a es 0, la función devuelve 0. Este tipo de recursividad se llama "recursividad descendente", donde la función se llama a sí misma con argumentos modificados hasta que se alcanza una condición base.
 
@@ -95,7 +95,13 @@ b) El programa implementa una función recursiva llamada recursive, que toma dos
 
 **EJERCICIO 4**
 
-El codigo esta implementado, y la explicación es esta 
+El codigo esta implementado, y la explicación es esta La función recursive(a, b) calcula la potencia de a elevado a la potencia de b. Sin embargo, hay un problema en la lógica de la función recursive() en este programa. Aquí está el análisis de cómo se comportará el programa:
+
+Cuando se llama recursive(1, -2), b es negativo. Dado que b != 0, el programa entra en el bloque else.
+En la llamada recursiva recursive(a, b + 1), b se incrementa en 1. Por lo tanto, cada llamada recursiva incrementará el valor de b en 1.
+Como b es negativo, este bucle de llamadas recursivas continuará indefinidamente, ya que b nunca alcanzará 0.
+Debido a este bucle infinito, el programa nunca terminará y no imprimirá nada en la consola. En una situación real, es posible que el programa genere una excepción de desbordamiento de pila debido al exceso de llamadas recursivas.
+
 
 El tipo de recursividad que usa es descendente, donde la función se llama a sí misma con un problema más pequeño, en este caso, el número dividido entre 10 hasta llegar a un caso base.
 La complejidad de este algoritmo es lineal, O(d), donde d es el número de dígitos en el número dado. Esto se debe a que la función recursiva se llama una vez por cada dígito en el número.
