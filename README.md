@@ -9,7 +9,8 @@ _Apartado 1_
 _Aparatdo 2_  
     La respuesta correcta es la B
 
-_Apartado 3_  La respuesta correcta es la B
+_Apartado 3_  
+    La respuesta correcta es la B
 
 _Apartado 4_  La respuetsa correcta es la B
 
