@@ -2,19 +2,19 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        // Crear usuarios de ejemplo
+
         UserAccount user1 = new UserAccount("user1", "user1@example.com");
         UserAccount user2 = new UserAccount("user2", "user2@example.com");
 
-        // Crear un tweet
+
         Tweet5 tweet51 = new Tweet5(LocalDate.now(), "Este es un tweet de ejemplo.", user1);
         System.out.println(tweet51);
 
-        // Crear un mensaje directo
+
         DirectMessage dm = new DirectMessage(LocalDate.now(), "¡Hola!", user1, user2);
         System.out.println(dm);
 
-        // Crear un retweet
+
         Retweet retweet = new Retweet(LocalDate.now(), "¡Miren esto!", user2, tweet51);
         System.out.println(retweet);
     }

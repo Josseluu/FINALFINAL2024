@@ -4,31 +4,28 @@ import java.util.List;
 
 public class TwitterX {
     public static void main(String[] args) {
-        List<Usuario2> usuarios = cargarUsuariosDesdeArchivo(); // Cargar usuarios desde un archivo
+        List<Usuario2> usuarios = cargarUsuariosDesdeArchivo();
 
-        // Menú de opciones
+
         System.out.println("Menú:");
         System.out.println("1. Cargar un usuario en memoria");
         System.out.println("2. Publicar un tweet");
         System.out.println("3. Ordenar usuarios por email de forma ascendente");
 
-        // Aquí iría la lógica para manejar la selección del usuario
 
-        // Ejemplo de cómo publicar un tweet para un usuario cargado previamente
-        Usuario2 usuarioActual = usuarios.get(0); // Supongamos que el primer usuario está cargado en memoria
+        Usuario2 usuarioActual = usuarios.get(0);
         try {
             usuarioActual.publicarTweet("Este es un tweet de ejemplo.");
         } catch (ExcepciónExtendida e) {
             System.out.println("Error: " + e.getMessage());
         }
 
-        // Ejemplo de cómo ordenar usuarios por email de forma ascendente
+
         Collections.sort(usuarios, (usuario1, usuario2) -> usuario1.getEmail().compareTo(usuario2.getEmail()));
     }
 
     public static List<Usuario2> cargarUsuariosDesdeArchivo() {
-        // Aquí iría la lógica para cargar usuarios desde un archivo
-        // Por simplicidad, crearemos usuarios de ejemplo
+
         List<Usuario2> usuarios = new ArrayList<>();
         usuarios.add(new Usuario2("usuario1", "usuario1@example.com"));
         usuarios.add(new Usuario2("usuario2", "usuario2@example.com"));
