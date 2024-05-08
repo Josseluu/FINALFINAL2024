@@ -75,8 +75,13 @@ Vamos a igualar A y B
 64 = n^2, sacamos raiz cuadrada a 64 quedando,
 
 n = raiz cuadrada de 64 que da como resultado final 8
-​	
- 
+​
+
+**EJERCICIO 3**
+
+a) El código imprimirá "0".
+
+b) El programa implementa una función recursiva llamada recursive, que toma dos argumentos enteros a y b. La función realiza una multiplicación recursiva de a por b, decrementando b en cada llamada recursiva hasta que b alcanza el valor de 0. Si b es 0, la función devuelve 1. Si a es 0, la función devuelve 0. Este tipo de recursividad se llama "recursividad descendente", donde la función se llama a sí misma con argumentos modificados hasta que se alcanza una condición base.
  
  
 
