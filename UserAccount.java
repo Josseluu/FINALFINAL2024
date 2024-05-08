@@ -5,9 +5,8 @@ import java.util.Scanner;
 public class UserAccount {
     private String alias;
     private String email;
-    private List<Tweet> tweets;
-    private List<UserAccount> following;
-    private List<Tweet> timeline;
+    private List<Tweet2> tweets;
+    private List<UserAccount> followers;
 
     public UserAccount(String alias, String email) {
         if (!Utils.isValidAlias(alias)) {
@@ -19,59 +18,96 @@ public class UserAccount {
         this.alias = alias;
         this.email = email;
         this.tweets = new ArrayList<>();
-        this.following = new ArrayList<>();
-        this.timeline = new ArrayList<>();
+        this.followers = new ArrayList<>();
     }
 
-    // Getters y setters
+
+    public void follow(UserAccount userToFollow) {
+        if (this == userToFollow) {
+            throw new IllegalArgumentException("No puedes seguirte a ti mismo.");
+        }
+        if (followers.contains(userToFollow)) {
+            System.out.println("Ya estás siguiendo a " + userToFollow.getAlias());
+        } else {
+            followers.add(userToFollow);
+        }
+    }
+
+    public void tweet(Tweet2 tweet) {
+        tweets.add(tweet);
+        for (UserAccount follower : followers) {
+            follower.addToTimeline(tweet);
+        }
+    }
+
+    private void addToTimeline(Tweet2 tweet) {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario: " + alias + ", Correo electrónico: " + email;
+    }
+
+
 
     public String getAlias() {
         return alias;
-    }
-
-    public void setAlias(String alias) {
-        if (!Utils.isValidAlias(alias)) {
-            throw new IllegalArgumentException("El alias no es válido.");
-        }
-        this.alias = alias;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        if (!Utils.isValidEmail(email)) {
-            throw new IllegalArgumentException("El email no es válido.");
-        }
-        this.email = email;
-    }
-
-    public List<Tweet> getTweets() {
+    public List<Tweet2> getTweets() {
         return tweets;
     }
 
-    public List<UserAccount> getFollowing() {
-        return following;
-    }
-
-    public List<Tweet> getTimeline() {
-        return timeline;
+    public List<UserAccount> getFollowers() {
+        return followers;
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Introduce el alias:");
+
+        System.out.println("Ingrese su alias:");
         String alias = scanner.nextLine();
 
-        System.out.println("Introduce el correo electrónico:");
+        System.out.println("Ingrese su correo electrónico:");
         String email = scanner.nextLine();
 
-        UserAccount user = new UserAccount(alias, email);
-        System.out.println("Se creó la cuenta de usuario con alias: " + user.getAlias() + " y correo electrónico: " + user.getEmail());
 
-        scanner.close();
+        UserAccount user1 = new UserAccount(alias, email);
+
+
+        System.out.println("Ingrese el contenido del tweet:");
+        String content = scanner.nextLine();
+
+
+        Tweet2 tweet = new Tweet2(content);
+
+
+        user1.tweet(tweet);
+
+        System.out.println("¡Tweet publicado con éxito!");
+    }
+}
+
+class Tweet2 {
+    private String content;
+
+    public Tweet2(String content) {
+        this.content = content;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    @Override
+    public String toString() {
+        return "Tweet: " + content;
     }
 }
 
@@ -81,12 +117,6 @@ class Utils {
     }
 
     public static boolean isValidEmail(String email) {
-        // Expresión regular simplificada para validar emails
-        String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
-        return email.matches(emailRegex);
+        return email.contains("@");
     }
-}
-
-class Tweet {
-    // Implementación de la clase Tweet
 }
