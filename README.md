@@ -91,5 +91,10 @@ El tipo de recursividad que usa es descendente, donde la función se llama a sí
 La complejidad de este algoritmo es lineal, O(d), donde d es el número de dígitos en el número dado. Esto se debe a que la función recursiva se llama una vez por cada dígito en el número.
  
 
+**EJERCICIO 5**
+ 
+ 
+ _Apartado 2_
 
-
+La decisión de modificar los atributos timeline y tweets dependerá de cómo se implementen y utilicen en el contexto de la aplicación. Si se espera que la línea de tiempo (timeline) de un usuario contenga tanto tweets normales como retweets, entonces sí sería apropiado modificar estos atributos para que puedan contener instancias de la clase Retweet. Esto permitiría que la línea de tiempo refleje todas las acciones relevantes del usuario, incluyendo retweets de otros usuarios.
+La modificación podría hacerse cambiando el tipo de datos de timeline y tweets a una lista que pueda contener tanto instancias de Tweet como de Retweet, por ejemplo, List<Tweet>.
