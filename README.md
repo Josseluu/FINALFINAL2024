@@ -15,7 +15,8 @@ _Apartado 3_
 _Apartado 4_  
     La respuetsa correcta es la B
 
-_Apartado 5_  La respuesta correcta es la B
+_Apartado 5_  
+    La respuesta correcta es la B
 
 
 
