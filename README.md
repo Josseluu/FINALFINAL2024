@@ -82,7 +82,13 @@ n = raiz cuadrada de 64 que da como resultado final 8
 a) El código imprimirá "0".
 
 b) El programa implementa una función recursiva llamada recursive, que toma dos argumentos enteros a y b. La función realiza una multiplicación recursiva de a por b, decrementando b en cada llamada recursiva hasta que b alcanza el valor de 0. Si b es 0, la función devuelve 1. Si a es 0, la función devuelve 0. Este tipo de recursividad se llama "recursividad descendente", donde la función se llama a sí misma con argumentos modificados hasta que se alcanza una condición base.
- 
+
+
+**EJERCICIO 4**
+El codigo esta implementado, y la explicación es esta 
+
+El tipo de recursividad que usa es descendente, donde la función se llama a sí misma con un problema más pequeño, en este caso, el número dividido entre 10 hasta llegar a un caso base.
+La complejidad de este algoritmo es lineal, O(d), donde d es el número de dígitos en el número dado. Esto se debe a que la función recursiva se llama una vez por cada dígito en el número.
  
 
 
