@@ -64,7 +64,21 @@ Iteración 6: El séptimo elemento, 89, lo comparamos con los elementos anterior
 
 Iteración 7: Finalmente, el octavo elemento, 85, se compara con los elementos anteriores y se coloca en su posición correcta. 13, 16, 20, 22, 50, 84, 85, 89.
 
+_Apartado 5_
 
+Vamos a igualar A y B 
+
+1024n = 16n^3, y vamos a sacar factor común n a ambos lados quedando, 
+
+1024 = 16n^2, dividimos a ambos lados entre 16 y queda,
+
+64 = n^2, sacamos raiz cuadrada a 64 quedando,
+
+n = raiz cuadrada de 64 que da como resultado final 8
+​	
+ 
+ 
+ 
 
 
 
