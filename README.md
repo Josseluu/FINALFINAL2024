@@ -46,6 +46,25 @@ Orden de complejidad computacional:
 Tanto en pilas como en colas, agregar o quitar elementos generalmente toma la misma cantidad de tiempo sin importar cuántos elementos hay. Esto se llama O(1), lo que significa que es eficiente sin importar el tamaño de la pila o la cola.
 
 
+_Apartado 4_
+
+El metodo por ordenacion consiste en crear una matriz ordenada donde se compara el segundo elemento de la matriz con el primero. Se intercambian si el segundo elemento es más pequeño. Luego, coloca el tercer objeto en su posición correcta después de compararlo con el segundo y el primero. 
+
+Iteración 1: Comenzamos con el segundo elemento, 20, como es más pequeño, los intercambiamos.  20, 50, 84, 13, 22, 16, 89, 85.
+
+Iteración 2: El tercer numero es 84, y lo comparamos con 50. Como 84 es más grande, lo dejamos donde está. 20, 50, 84, 13, 22, 16, 89, 85.
+
+Iteración 3: El cuarto numero es 13. Lo comparamos con 84, 50 y 20. Como es el más pequeño, lo movemos a la primera posición. 13, 20, 50, 84, 22, 16, 89, 85.
+
+Iteración 4: Tomamos el quinto elemento, 22, y lo comparamos con los elementos anteriores. Lo dejamos donde está porque es más grande que 13 y más pequeño que 84. 13, 20, 22, 50, 84, 16, 89, 85.
+
+Iteración 5: El sexto elemento, 16, lo comparamos con los elementos anteriores y lo movemos a su posición correcta.  13, 16, 20, 22, 50, 84, 89, 85.
+
+Iteración 6: El séptimo elemento, 89, lo comparamos con los elementos anteriores y lo dejamos donde está porque es más grande que todos los demás.  13, 16, 20, 22, 50, 84, 89, 85.
+
+Iteración 7: Finalmente, el octavo elemento, 85, se compara con los elementos anteriores y se coloca en su posición correcta. 13, 16, 20, 22, 50, 84, 85, 89.
+
+
 
 
 
