@@ -46,6 +46,7 @@ Orden de complejidad computacional:
 Tanto en pilas como en colas, agregar o quitar elementos generalmente toma la misma cantidad de tiempo sin importar cuántos elementos hay. Esto se llama O(1), lo que significa que es eficiente sin importar el tamaño de la pila o la cola.
 
 
+
 _Apartado 4_
 
 El metodo por ordenacion consiste en crear una matriz ordenada donde se compara el segundo elemento de la matriz con el primero. Se intercambian si el segundo elemento es más pequeño. Luego, coloca el tercer objeto en su posición correcta después de compararlo con el segundo y el primero. 
@@ -64,6 +65,7 @@ Iteración 6: El séptimo elemento, 89, lo comparamos con los elementos anterior
 
 Iteración 7: Finalmente, el octavo elemento, 85, se compara con los elementos anteriores y se coloca en su posición correcta. 13, 16, 20, 22, 50, 84, 85, 89.
 
+
 _Apartado 5_
 
 Vamos a igualar A y B 
@@ -77,11 +79,13 @@ Vamos a igualar A y B
 n = raiz cuadrada de 64 que da como resultado final 8
 ​
 
+
 **EJERCICIO 3**
 
 a) El código imprimirá "0".
 
 b) El programa implementa una función recursiva llamada recursive, que toma dos argumentos enteros a y b. La función realiza una multiplicación recursiva de a por b, decrementando b en cada llamada recursiva hasta que b alcanza el valor de 0. Si b es 0, la función devuelve 1. Si a es 0, la función devuelve 0. Este tipo de recursividad se llama "recursividad descendente", donde la función se llama a sí misma con argumentos modificados hasta que se alcanza una condición base.
+
 
 
 **EJERCICIO 4**
