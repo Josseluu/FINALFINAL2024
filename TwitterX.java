@@ -25,7 +25,8 @@ public class TwitterX {
     }
 
     public static List<Usuario2> cargarUsuariosDesdeArchivo() {
-
+        // Aquí iría la lógica para cargar usuarios desde un archivo
+        // Por simplicidad, crearemos usuarios de ejemplo
         List<Usuario2> usuarios = new ArrayList<>();
         usuarios.add(new Usuario2("usuario1", "usuario1@example.com"));
         usuarios.add(new Usuario2("usuario2", "usuario2@example.com"));
